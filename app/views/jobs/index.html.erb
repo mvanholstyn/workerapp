@@ -2,5 +2,5 @@
 <% @jobs.each do |job| %>
   <%= job.name %> - <%= link_to "Show", job %>  
 <% end %>
-<br />
+<hr />
 <%= link_to "New Job", new_job_path %>
