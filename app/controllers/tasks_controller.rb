@@ -1,4 +1,4 @@
-class WorkersController < ApplicationController
+class TasksController < ApplicationController
   def index
   end
   

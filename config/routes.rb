@@ -1,5 +1,8 @@
 Workerapp::Application.routes.draw do
-  root :to => "workers#index"
-  match "workers/next.json" => "workers#next"
-  match "workers/result.json" => "workers#result"
+  resources :jobs
+  resources :tasks do
+    match :next
+    match :result
+  end
+  root :to => "jobs#index"  
 end

@@ -1,0 +1,16 @@
+<h1>Show Job</h1>
+<%= link_to "Back to Jobs", root_path %>
+<% form_for(@job) do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :readonly => true %>
+  </p>
+  <p>
+    <%= f.label :function %><br />
+    <%= f.text_area :function, :readonly => true %>
+  </p>
+  <p>
+    <%= f.label :data %><br />
+    <%= f.text_area :data, :readonly => true %>
+  </p>
+<% end %>
