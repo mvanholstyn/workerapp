@@ -10,6 +10,10 @@ class JobsController < ApplicationController
   end
   def create
     job = Job.create(params[:job])
+    data = eval(job.data)
+    until data.empty?
+      job.tasks.create(:data => data.pop)
+    end
     if job.save
       redirect_to :action => :index
     else
