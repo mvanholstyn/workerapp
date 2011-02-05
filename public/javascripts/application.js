@@ -1,2 +1,3 @@
-// Place your application-specific JavaScript functions and classes here
-// This file is automatically included by javascript_include_tag :defaults
+var worker = new Worker("/javascripts/worker.js");
+worker.onmessage = function(e) { alert(e.data); };
+worker.postMessage([window.location.host, "mark-key"]);
