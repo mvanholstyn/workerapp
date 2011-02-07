@@ -45,25 +45,7 @@ $.prototype.ajax = {
     } 
   } 
 } 
-$ = new $(); 
-
-/*
-$.ajax.get({ 
-    url: '/index.html', 
-    callback: function(response) { 
-        var text = response.text; 
-        alert(text); 
-    } 
-});
-
-$.ajax.post({ 
-    url: '/post.php', 
-    data: 'x=foo&y=bar', 
-    callback: function(response) { 
-        alert(response.text); 
-    } 
-}); 
-*/
+$ = new $();
 
 var executeTask = function(host, api_key) {
   $.ajax.get({

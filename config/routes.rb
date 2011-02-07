@@ -4,5 +4,6 @@ Workerapp::Application.routes.draw do
     match :next
     match :result
   end
+  resources :test
   root :to => "jobs#index"  
 end
