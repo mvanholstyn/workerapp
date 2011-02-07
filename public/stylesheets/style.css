@@ -219,9 +219,10 @@ button {  width: auto; overflow: visible; }
 
 h1, h2, h3, h4, h5 { font-weight: normal; text-transform: uppercase; }
 
+/*
 @font-face { font-family: "MolotRegular"; src: url('../assets/Molot.eot'); src: local("../assets/Molot"), local("../assets/Molot"), url('../assets/Molot.woff') format("woff"), url('../assets/Molot.ttf') format("truetype"), url('../assets/Molot.svg#Molot') format("svg"); }
 @font-face { font-family: "InsolentRegular"; src: url('../assets/insolent.eot'); src: url('../assets/insolent.woff') format('woff'), url('../assets/insolent.ttf') format('truetype'), url('../assets/insolent.svg#webfontD7S5Wv86') format('svg'); }
-
+*/
 h1, em, #body h3, h4 { font-family: "InsolentRegular", Arial, sans-serif; text-shadow: 1px 1px 0px black, 2px 2px 0px #476871, 3px 3px 0px #476871, 4px 4px 0px #476871, 5px 5px 0px #476871, 6px 6px 0px #476871, 7px 7px 0px #476871; }   
 
 html[lang='en'] h1, html[lang='en'] em, html[lang='en'] #body h3, html[lang='en'] h4, html[lang='en-us'] h1, html[lang='en-us'] em, html[lang='en-us'] #body h3, html[lang='en-us'] h4 { font-family: "MolotRegular", Arial, sans-serif; } 
