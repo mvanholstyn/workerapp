@@ -52,7 +52,7 @@ var executeTask = function(host, api_key) {
     url: "http://" + host + "/tasks/next.json?api_key=" + api_key, 
     // data: { api_key: api_key },
     callback: function(response) {
-      if(response.json.id == null) return;
+      if(response.json.nodata) return;
       var fn = eval("(" + response.json.fn + ")");
       var result = fn(response.json.data);
       $.ajax.get({ 

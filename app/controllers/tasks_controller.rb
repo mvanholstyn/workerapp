@@ -15,7 +15,7 @@ class TasksController < ApplicationController
       task.update_attributes(:status => "pulled")
       data = { :id => task.id, :fn => task.job.function, :data => task.data }
     else
-      data = { :id => nil, :fn => nil, :data => nil}
+      data = { :nodata => true }
     end
     respond_with(data.to_json)
   end
