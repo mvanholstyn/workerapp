@@ -49,13 +49,13 @@ $ = new $();
 
 var executeTask = function(host, api_key) {
   $.ajax.get({
-    url: "http://" + host + "/workers/next.json?api_key=" + api_key, 
+    url: "http://" + host + "/tasks/next.json?api_key=" + api_key, 
     // data: { api_key: api_key },
     callback: function(response) {
       var fn = eval("(" + response.json.fn + ")");
       var result = fn(response.json.data);
       $.ajax.get({ 
-        url: "http://" + host + "/workers/result.json?api_key=" + api_key + "&id=" + response.json.id + "&result=" + result, 
+        url: "http://" + host + "/tasks/result.json?api_key=" + api_key + "&id=" + response.json.id + "&result=" + result, 
         // data: { api_key: api_key, result: result },
         callback: function(response){
           executeTask(host, api_key);
