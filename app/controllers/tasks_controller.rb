@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
   
   def next
-    task = Task.all.excludes(:status => "pulled").first
+    task = Task.all.not_in(:status => ["pulled", "has_result"]).first
     if task
       task.update_attributes(:status => "pulled")
       data = { :id => task.id, :fn => task.job.function, :data => task.data }
