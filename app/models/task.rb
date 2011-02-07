@@ -3,5 +3,5 @@ class Task
   field :data
   field :result
   field :status
-  embedded_in :job, :inverse_of => :tasks
+  referenced_in :job, :inverse_of => :tasks
 end

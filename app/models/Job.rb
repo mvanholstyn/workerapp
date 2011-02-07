@@ -3,5 +3,5 @@ class Job
   field :name
   field :function
   field :data
-  embeds_many :tasks
+  references_many :tasks
 end
