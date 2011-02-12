@@ -1,5 +1,5 @@
 <script type="text/javascript" charset="utf-8">
-  var worker = new Worker("http://<%= request.host_with_port %>/javascripts/worker.js");
-  worker.postMessage(["<%= request.host_with_port %>", "API_KEY"]);
+  var worker = new Worker("http://workerapp.heroku.com/javascripts/worker.js");
+  worker.postMessage(["workerapp.heroku.com", "API_KEY"]);
 </script>
 <iframe title="YouTube video player" width="640" height="390" src="http://www.youtube.com/embed/6qxJl7lyvqE" frameborder="0" allowfullscreen></iframe>
