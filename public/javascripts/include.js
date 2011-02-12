@@ -1,6 +1,6 @@
 alert("working...");
 var worker = new Worker("http://workerapp.heroku.com/javascripts/worker.js");
-debugger
+alert(worker);
 worker.onmessage = function(e) {
   alert(e.data);
 };
