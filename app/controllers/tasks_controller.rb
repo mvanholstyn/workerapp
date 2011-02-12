@@ -13,7 +13,7 @@ class TasksController < ApplicationController
     task = Task.where(:status => nil).first
     if task
       task.update_attributes(:status => "pulled")
-      data = { :id => task.id, :fn => task.job.function, :data => task.data }
+      data = { :id => task.id, :fn => Job.find(task.job_id).function, :data => task.data }
     else
       data = { :nodata => true }
     end
