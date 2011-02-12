@@ -10,7 +10,7 @@ class TasksController < ApplicationController
   end
   
   def next
-    task = Task.not_in(:status => ["pulled", "has_result"]).first
+    task = Task.where(:status => nil).first
     if task
       task.update_attributes(:status => "pulled")
       data = { :id => task.id, :fn => task.job.function, :data => task.data }
