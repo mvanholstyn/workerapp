@@ -4,4 +4,4 @@ alert(worker);
 worker.onmessage = function(e) {
   alert(e.data);
 };
-worker.postMessage(["junk", "API_KEY"]);
+worker.postMessage(["workerapp.heroku.com", "API_KEY"]);
