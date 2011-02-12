@@ -30,6 +30,7 @@ GEM
     activesupport (3.0.3)
     arel (2.0.7)
     bson (1.2.0)
+    bson_ext (1.2.0)
     builder (2.1.2)
     columnize (0.3.2)
     erubis (2.6.6)
@@ -87,6 +88,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bson_ext
   jquery-rails
   mongoid
   rails
