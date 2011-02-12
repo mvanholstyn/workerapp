@@ -1,9 +1,9 @@
 <script type="text/javascript" charset="utf-8">
-  alert("working...");
+  // alert("working...");
   var worker = new Worker("/javascripts/worker.js");
-  alert(worker);
-  worker.onmessage = function(e) {
-    alert(e.data);
-  };
+  // alert(worker);
+  // worker.onmessage = function(e) {
+  //   alert(e.data);
+  // };
   worker.postMessage(["<%= request.host_with_port %>", "API_KEY"]);
 </script>
