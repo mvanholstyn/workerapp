@@ -66,7 +66,6 @@ var executeTask = function(host, api_key) {
   });
 };
 
-
 onmessage = function(e){
   postMessage("running...");
   var host = e.data[0];
