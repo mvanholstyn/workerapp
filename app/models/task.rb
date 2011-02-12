@@ -4,4 +4,6 @@ class Task
   field :result
   field :status
   referenced_in :job, :inverse_of => :tasks
+
+  index :status
 end
